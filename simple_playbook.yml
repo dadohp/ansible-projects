@@ -2,14 +2,14 @@
 - hosts: 192.168.100.215
   remote_user: root
   tasks:
-    - name: Install Samba Service
+    - name: uninstall Samba Service
       yum:
           name: samba
-          state: latest
+          state: absent
     - name: Start Samba Service
       service:
           name: "{{ item }}"
-          state: started
+          state: absent
       with_items:
           - 'smb'
           - 'nmb'
