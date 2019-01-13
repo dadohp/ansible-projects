@@ -1,9 +1,9 @@
 ---
-- hosts: 192.168.100.215
+- hosts: 192.168.100.213
   remote_user: root
   tasks:
     - name: removed samba
-      yum:
+      apt:
           name: samba
           state: absent
     
