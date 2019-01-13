@@ -6,10 +6,10 @@
       yum:
           name: samba
           state: absent
-    - name: Start Samba Service
+    - name: stop Samba Service
       service:
           name: "{{ item }}"
-          state: absent
+          state: stopped
       with_items:
           - 'smb'
           - 'nmb'
