@@ -1,6 +1,6 @@
 ---
 - hosts: 192.168.100.215
-  become_user: root
+  become_user: dado
   tasks:
     - name: Install Samba Service
       yum:
