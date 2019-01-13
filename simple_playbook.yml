@@ -2,15 +2,9 @@
 - hosts: 192.168.100.215
   remote_user: root
   tasks:
-    - name: install Samba Service
+    - name: install  bind
       yum:
-          name: samba
+          name: bind9
           state: present
-    - name: stop Samba Service
-      service:
-          name: "{{ item }}"
-          state: started
-      with_items:
-          - 'smb'
-          - 'nmb'
+    
 ...
