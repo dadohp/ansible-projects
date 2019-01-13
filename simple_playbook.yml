@@ -2,9 +2,9 @@
 - hosts: 192.168.100.215
   remote_user: root
   tasks:
-    - name: install  bind
+    - name: removed samba
       yum:
-          name: bind9
-          state: present
+          name: samba
+          state: absent
     
 ...
