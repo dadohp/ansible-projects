@@ -1,6 +1,6 @@
 ---
-- hosts: host
-  become_user: root
+- hosts: centos1
+  become_user: dado
   tasks:
     - name: Install Samba Service
       yum:
